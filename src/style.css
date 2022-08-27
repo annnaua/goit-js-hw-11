@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f7f9;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  outline: none;
+
+  cursor: pointer;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+  height: 10vh;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2b2d42;
+}
+
+/* Search Form */
+
+.search-form {
+  width: 25%;
+  display: flex;
+  gap: 20px;
+}
+
+.input-form {
+  width: 100%;
+  height: 42px;
+  padding: 10px 15px;
+
+  border-radius: 2px;
+  border: 2px solid #f7f7f9;
+  background-color: #f7f7f9;
+
+  font-size: 16px;
+  color: #2b2d42;
+
+  transition: 300ms ease color;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #e86a92;
+}
+
+/* Section */
+
+.section {
+  width: 100%;
+  height: 100%;
+  padding: 20vh 10vh 10vh 10vh;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -20px;
+}
+
+/* Card */
+
+.photo-card {
+  width: calc((100% - 20px * 8) / 4);
+  border-radius: 2px;
+
+  margin: 20px;
+  overflow: hidden;
+}
+
+.photo-card:last-child {
+  margin-bottom: 0;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 345px;
+
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 20%;
+  padding: 10px 15px;
+
+  background-color: #f7f7f9;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 16px;
+  color: #2b2d42;
+}
+
+.info-item b {
+  color: #ff74a0;
+}
+
+/* Buttons */
+
+.button-search {
+  width: 30%;
+  height: 42px;
+  padding: 10px;
+
+  border-radius: 2px;
+  border: 2px solid #e86a92;
+  background-color: #e86a92;
+
+  font-size: 16px;
+  color: #f7f7f9;
+
+  transition: 300ms ease background-color, border;
+}
+
+.button-search:hover,
+.button-search:focus {
+  border: #ff74a0;
+  background-color: #ff74a0;
+}
+
+.button-load {
+  display: block;
+
+  width: 10%;
+  height: 42px;
+  padding: 10px;
+
+  border-radius: 2px;
+  border: 2px solid #e86a92;
+  background-color: #e86a92;
+
+  font-size: 16px;
+  color: #f7f7f9;
+
+  margin: 100px auto 0px auto;
+
+  transition: 300ms ease background-color;
+}
+
+.button-load:hover,
+.button-load:focus {
+  border: #ff74a0;
+  background-color: #ff74a0;
+}
+
+.is-hidden {
+  display: none;
+}

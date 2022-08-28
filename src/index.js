@@ -56,6 +56,7 @@ function onResponseData({ hits, totalHits }) {
     clearPhotoMarkup();
     notifyNotFound(searchQuery);
     loadMoreBtn.classList.add('is-hidden');
+
     return;
   }
   if (totalHits > 0 && currentPage === 1) {
@@ -67,8 +68,11 @@ function onResponseData({ hits, totalHits }) {
   }
 
   appendPhotoMarkup(hits);
-  loadMoreBtn.classList.remove('is-hidden');
+
   lightbox.refresh();
+  loadMoreBtn.classList.remove('is-hidden');
+
+  onSmoothScroll();
 }
 
 // Event Listeners ------------------------------
@@ -111,3 +115,14 @@ function notifyEndOfResults() {
 }
 
 // Smooth Scroll Function ------------------------------
+
+function onSmoothScroll() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
+
+  window.scrollBy({
+    top: cardHeight * 2,
+    behavior: 'smooth',
+  });
+}
